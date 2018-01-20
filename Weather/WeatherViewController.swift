@@ -20,6 +20,7 @@ class WeatherViewController: UIViewController {
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         let isLandscape = size.width > size.height
         if isLandscape {
             mainView.centerContentStack.axis = .horizontal

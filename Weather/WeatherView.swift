@@ -38,8 +38,10 @@ class WeatherView: UIView {
         cityAndConditionsStack.addArrangedSubview(conditionsLabel)
 
         mainStack.addArrangedSubview(buttonsStack)
+        buttonsStack.addArrangedSubview(UIView(frame: .zero))
         buttonsStack.addArrangedSubview(celsiusButton)
         buttonsStack.addArrangedSubview(fahrenheitButton)
+        buttonsStack.addArrangedSubview(UIView(frame: .zero))
     }
 
     private func setupConstraints() {
@@ -60,6 +62,8 @@ class WeatherView: UIView {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 10
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 10, left: 30, bottom: 30, right: 30) 
         return stackView
     }()
 
@@ -75,7 +79,7 @@ class WeatherView: UIView {
     let cityAndConditionsStack: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillProportionally
         stackView.spacing = 10
         return stackView
     }()
@@ -84,7 +88,8 @@ class WeatherView: UIView {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
-        stackView.spacing = 10
+        stackView.spacing = 60
+        stackView.alignment = .center
         return stackView
     }()
 
@@ -99,7 +104,7 @@ class WeatherView: UIView {
 
     let cityLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.systemFont(ofSize: 36)
+        label.font = UIFont.systemFont(ofSize: 40)
         label.textColor = .white
         label.textAlignment = .center
         label.text = "Christchurch"
@@ -127,7 +132,7 @@ class WeatherView: UIView {
     let celsiusButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("°C", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 73)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 80)
         button.setTitleColor(.white, for: .normal)
         return button
     }()
@@ -135,7 +140,7 @@ class WeatherView: UIView {
     let fahrenheitButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("°F", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 73)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 80)
         button.setTitleColor(.white, for: .normal)
         return button
     }()
@@ -143,7 +148,7 @@ class WeatherView: UIView {
     let buttonsStack: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .equalCentering
         stackView.spacing = 10
         return stackView
     }()
