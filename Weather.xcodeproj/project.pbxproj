@@ -13,6 +13,8 @@
 		7C4DD4B320085CA300B60A88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4DD4B220085CA300B60A88 /* Assets.xcassets */; };
 		7C4DD4B620085CA300B60A88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4DD4B420085CA300B60A88 /* LaunchScreen.storyboard */; };
 		7CB5DB4520119C850081EEC5 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5DB4420119C850081EEC5 /* WeatherView.swift */; };
+		7CE776EF202D20150016A24C /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE776EE202D20150016A24C /* WeatherPresenter.swift */; };
+		7CE776F1202D28720016A24C /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE776F0202D28720016A24C /* UIColor+theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7C4DD4B520085CA300B60A88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4DD4B720085CA300B60A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CB5DB4420119C850081EEC5 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		7CE776EE202D20150016A24C /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
+		7CE776F0202D28720016A24C /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				7C4DD4B720085CA300B60A88 /* Info.plist */,
 				7C415ADA2009EAF9008957DE /* UIView+constraints.swift */,
 				7CB5DB4420119C850081EEC5 /* WeatherView.swift */,
+				7CE776EE202D20150016A24C /* WeatherPresenter.swift */,
+				7CE776F0202D28720016A24C /* UIColor+theme.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE776EF202D20150016A24C /* WeatherPresenter.swift in Sources */,
 				7C4DD4AE20085CA300B60A88 /* WeatherViewController.swift in Sources */,
 				7C415ADB2009EAF9008957DE /* UIView+constraints.swift in Sources */,
+				7CE776F1202D28720016A24C /* UIColor+theme.swift in Sources */,
 				7C4DD4AC20085CA300B60A88 /* AppDelegate.swift in Sources */,
 				7CB5DB4520119C850081EEC5 /* WeatherView.swift in Sources */,
 			);

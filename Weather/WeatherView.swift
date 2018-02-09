@@ -25,7 +25,6 @@ class WeatherView: UIView {
     }
 
     private func setupViews() {
-        self.addSubview(backgroundView)
         self.addSubview(mainStack)
         conditionsImageStack.addArrangedSubview(conditionsImageView)
         mainStack.addArrangedSubview(conditionsImageStack)
@@ -45,17 +44,10 @@ class WeatherView: UIView {
     }
 
     private func setupConstraints() {
-        backgroundView.pinEdges(to: self)
         mainStack.pinEdgesToSafeArea(of: self)
     }
 
     // MARK: - Views
-
-    let backgroundView: UIView = {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = .red
-        return view
-    }()
 
     let mainStack: UIStackView = {
         let stackView = UIStackView(frame: .zero)
@@ -152,4 +144,17 @@ class WeatherView: UIView {
         stackView.spacing = 10
         return stackView
     }()
+}
+
+extension WeatherView {
+    var gradientLayer: CAGradientLayer {
+        return self.layer as! CAGradientLayer
+    }
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.classForCoder()
+    }
+
+    func updateGradient(_ colors: [CGColor]) {
+        gradientLayer.colors = colors
+    }
 }
